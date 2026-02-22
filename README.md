@@ -1,6 +1,32 @@
 # SatsStream Intent Router (v1)
 
-Intent-based routing on Stacks with a single-solver architecture for hackathon demos.
+Bitcoin users usually know the outcome they want, but not the safest or best execution path.
+SatsStream lets users post outcome-based intents (swap/yield) with explicit guarantees, then lets solvers execute them.
+Stacks + Clarity give deterministic, auditable settlement while anchoring security and finality to Bitcoin.
+This is built for Bitcoin users, wallet teams, and BTCFi apps that want intent UX without giving up transparency.
+
+## How this uses Stacks & Bitcoin
+
+- Clarity settlement: intents are created, escrowed, filled, and canceled in the `intent-router.clar` contract with on-chain rules.
+- Bitcoin-denominated intents: amounts are modeled in Bitcoin-native units/sats-style UX (v1 demo tokens mirror this flow in test mode).
+- Path to real liquidity: the v1 quote source is modular, so internal pricing can be replaced by sBTC/USDCx/Bitflow routing adapters.
+
+## Screenshots
+
+Create Intent flow:
+
+![Create Intent screen](docs/screenshots/create-intent.png)
+
+Intent Explorer flow:
+
+![Intent Explorer screen](docs/screenshots/intent-explorer.png)
+
+## Judges cheat sheet
+
+- Innovation: Bitcoin intent UX where users declare outcome constraints and solvers handle execution pathing.
+- Technical Depth: Clarity escrow/validation contract + off-chain solver/indexer architecture + deterministic fill constraints.
+- UX: simple Create Intent / My Intents / Intent Explorer flows with min-out, deadline, and solver-fee guidance.
+- Ecosystem Impact: modular routing layer designed to plug into Stacks BTCFi primitives like sBTC, USDCx, and Bitflow.
 
 ## 1. Intent format (spec)
 
