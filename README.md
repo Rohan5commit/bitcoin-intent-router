@@ -116,10 +116,8 @@ Then run the same dev scripts.
 
 ## Free GitHub deployment path
 
-- Frontend: GitHub Pages via `workflow-templates/deploy-frontend.yml.example`
-- Solver: GitHub Actions scheduled job via `workflow-templates/solver-cron.yml.example`
-- CI: `workflow-templates/ci.yml.example`
-
-If your token allows workflow writes, copy these into `.github/workflows/` in GitHub UI or locally.
+- Frontend: GitHub Pages via `.github/workflows/deploy-frontend.yml`
+- Solver: GitHub Actions scheduled job via `.github/workflows/solver-cron.yml`
+- CI: `.github/workflows/ci.yml`
 
 This stack keeps infra costs at zero for hack/demo scale.
