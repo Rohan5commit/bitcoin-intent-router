@@ -1,0 +1,16 @@
+[project]
+name = "bitcoin-intent-router"
+description = "Intent router v1 for swaps and yield intents"
+authors = ["Rohan"]
+telemetry = false
+cache_dir = ".clarinet"
+
+[contracts.intent-router]
+path = "contracts/intent-router.clar"
+clarity_version = 2
+epoch = 2.5
+
+[contracts.sip010-trait]
+path = "contracts/sip010-trait.clar"
+clarity_version = 2
+epoch = 2.5

@@ -1,0 +1,16 @@
+{
+  "name": "satsstream",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "indexer",
+    "frontend"
+  ],
+  "scripts": {
+    "build": "npm run --workspace indexer build && npm run --workspace frontend build",
+    "dev:indexer": "npm run --workspace indexer dev",
+    "dev:solver": "npm run --workspace indexer solver",
+    "dev:frontend": "npm run --workspace frontend dev",
+    "test": "npm run --workspace indexer test"
+  }
+}
